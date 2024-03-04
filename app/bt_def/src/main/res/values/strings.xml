@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">bt_def</string>
+    <string name="paired_devices">Сопреженные устройства</string>
+    <string name="search_devices">Поиск устройств…</string>
+    <string name="empty">Пусто</string>
 </resources>
