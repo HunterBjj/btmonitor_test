@@ -4,6 +4,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bt_def.R
 import com.example.bt_def.databinding.ListItemBinding
 
 class ItemAdapter : ListAdapter<ListItem, ItemAdapter.MyHolder>(Comparator()) {
