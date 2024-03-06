@@ -1,9 +1,11 @@
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bt_def.ListItem
 import com.example.bt_def.R
 import com.example.bt_def.databinding.ListItemBinding
 
@@ -13,8 +15,14 @@ class ItemAdapter : ListAdapter<ListItem, ItemAdapter.MyHolder>(Comparator()) {
         private val b = ListItemBinding.bind(view)
 
         fun bind(item: ListItem) = with(b){
-            name.text = item.name
-            mac.text = item.mac
+            device = item
+            try {
+                name.text = item.device.name
+                mac.text = item.device.address
+            }
+            catch (e: SecurityException) {}
+
+            if(item.isChecked) adapter.selectCheckBox(checkBox)
         }
     }
 
@@ -36,5 +44,9 @@ class ItemAdapter : ListAdapter<ListItem, ItemAdapter.MyHolder>(Comparator()) {
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
         holder.bind(getItem(position))
+    }
+
+    interface Listener {
+        fun onClick(device: ListItem)
     }
 }

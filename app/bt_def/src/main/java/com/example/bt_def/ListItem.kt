@@ -1,4 +1,6 @@
+package com.example.bt_def
+import android.bluetooth.BluetoothDevice
 data class ListItem(
-    val name: String,
-    val mac: Boolean
+    val device: BluetoothDevice,
+    val isChecked: Boolean
 )
