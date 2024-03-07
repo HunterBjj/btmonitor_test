@@ -166,7 +166,7 @@ class DeviceListFragment : Fragment(), ItemAdapter.Listener {
 
     private val bReceiver = object : BroadcastReceiver() {
         override fun onReceive(p0: Context?, intent: Intent?) {
-            if (intent?.action == BluetoothDevice.ACTION_FOUND) {
+            if(intent?.action == BluetoothDevice.ACTION_FOUND) {
                 val device =
                     intent.getParcelableExtra<BluetoothDevice>(BluetoothDevice.EXTRA_DEVICE)
                 val list = mutableSetOf<ListItem>()
