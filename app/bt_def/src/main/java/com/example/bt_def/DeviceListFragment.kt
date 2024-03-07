@@ -1,3 +1,4 @@
+package com.example.bt_def
 import android.Manifest
 import android.app.Activity
 import android.bluetooth.BluetoothAdapter
@@ -19,8 +20,8 @@ import android.view.ViewGroup
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.bt_def.BluetoothConstants
-import com.example.bt_def.ListItem
+import changeButtonColor
+import checkBtPermissions
 import com.google.android.material.snackbar.Snackbar
 import com.example.bt_def.databinding.FragmentListBinding
 

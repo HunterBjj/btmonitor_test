@@ -45,7 +45,7 @@ class ConnectThread(device: BluetoothDevice, val listener: BluetoothController.L
                 }
             }
 
-        } catch (e: IOException)
+        } catch (e: IOException){}
     }
 
     fun sendMessage(message: String) {
